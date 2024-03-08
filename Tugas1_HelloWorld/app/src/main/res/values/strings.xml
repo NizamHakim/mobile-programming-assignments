@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tugas1_HelloWorld</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="openDrawer">Open Drawer</string>
+    <string name="closeDrawer">Close Drawer</string>
+    <string name="nizam_hakim_santoso">Nizam Hakim Santoso</string>
+    <string name="hello_world">Hello World</string>
+</resources>
