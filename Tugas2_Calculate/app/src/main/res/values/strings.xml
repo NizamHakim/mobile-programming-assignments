@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tugas2_Calculate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="openDrawer">Open Drawer</string>
+    <string name="closeDrawer">Close Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="nizam_hakim_santoso">Nizam Hakim Santoso</string>
+    <string name="hello_world">Hello World</string>
+    <string name="home">Home</string>
+    <string name="calculate">Calculate</string>
+    <string name="exit">Exit</string>
+    <string name="input_mathematical_equation">Input Mathematical Equation</string>
+    <string name="nan">NaN</string>
+</resources>

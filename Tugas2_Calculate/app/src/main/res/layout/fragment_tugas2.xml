@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tugas2Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_equation_title"
+        android:layout_centerHorizontal="true"
+        android:text="@string/input_mathematical_equation"
+        android:textSize="18sp"
+        android:labelFor="@id/input_equation_field"
+        android:layout_margin="20dp" />
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:id="@+id/input_equation_field"
+        android:inputType="text"
+        android:background="@drawable/edit_text_column"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/input_equation_title"
+        android:padding="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/two_buttons"
+        android:layout_below="@id/input_equation_field"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/calculate_button"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/pink"
+            android:layout_marginEnd="40dp"
+            android:text="@string/calculate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/exit_button"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/purple"
+            android:text="@string/exit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/two_buttons"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_label"
+            android:text="Result: "
+            android:textSize="18sp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_field"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
