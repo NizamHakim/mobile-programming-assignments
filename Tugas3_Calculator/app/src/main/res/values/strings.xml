@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tugas3_Calculator</string>
+    <string name="bagi_icon">÷</string>
+    <string name="kali_icon">×</string>
+    <string name="kurang_icon">-</string>
+    <string name="tambah_icon">+</string>
+    <string name="bilangan_1">Bilangan 1</string>
+    <string name="bilangan_2">Bilangan 2</string>
+    <string name="result">Result:</string>
+    <string name="error">Error</string>
+</resources>
