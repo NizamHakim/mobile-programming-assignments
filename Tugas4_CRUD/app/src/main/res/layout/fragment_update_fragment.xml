@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".create_fragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_entry_by_nrp"
+        android:textSize="25sp"
+        android:layout_marginVertical="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/pink"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="50dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/nrp_label_update"
+            android:labelFor="@+id/nrp_edit_update"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/purple"
+            android:text="@string/nrp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:minHeight="48dp"
+            android:id="@+id/nrp_edit_update"
+            android:inputType="number"
+            android:padding="10dp"
+            android:background="@drawable/custom_edit_text"
+            android:importantForAutofill="no" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/update_nama_container"
+        android:orientation="horizontal"
+        android:paddingHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/nama_label_update"
+            android:labelFor="@+id/nama_edit_update"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/purple"
+            android:text="@string/nama"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:minHeight="48dp"
+            android:id="@+id/nama_edit_update"
+            android:inputType="text"
+            android:padding="10dp"
+            android:background="@drawable/custom_edit_text"
+            android:importantForAutofill="no" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/update1_btn"
+        android:text="@string/find"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_button"
+        android:visibility="visible"
+        android:backgroundTint="@color/pink"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_container"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/update2_btn"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/purple"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/update3_btn"
+            android:text="@string/update"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/pink"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Tugas4_CRUD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_entry_by_nrp">Delete Entry by NRP</string>
+    <string name="nrp">NRP:</string>
+    <string name="delete">Delete</string>
+    <string name="create_new_entry">Create New Entry</string>
+    <string name="nama">Nama:</string>
+    <string name="create">Create</string>
+    <string name="find_entry_by_nrp">Find Entry by NRP</string>
+    <string name="find">Find</string>
+    <string name="result">Result:</string>
+    <string name="entry_not_found">Entry Not Found</string>
+    <string name="update_entry_by_nrp">Update Entry by NRP</string>
+    <string name="cancel">Cancel</string>
+    <string name="update">Update</string>
+    <string name="read">Read</string>
+</resources>
