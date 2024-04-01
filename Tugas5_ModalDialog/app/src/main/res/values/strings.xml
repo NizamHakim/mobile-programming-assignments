@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tugas5_ModalDialog</string>
+    <string name="nama">Nama</string>
+    <string name="show_dialog">Show Dialog</string>
+</resources>
