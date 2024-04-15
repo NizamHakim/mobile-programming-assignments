@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tugas6_ListView</string>
+    <string name="photo_preview">photo_preview</string>
+    <string name="nama">Nama</string>
+    <string name="nrp">NRP</string>
+    <string name="no_hp">No. HP</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="plus_icon">+</string>
+    <string name="update_student">Update Student</string>
+    <string name="add_photo">add_photo</string>
+    <string name="update">Update</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_student">Add Student</string>
+    <string name="submit">Submit</string>
+</resources>

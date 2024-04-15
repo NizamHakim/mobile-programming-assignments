@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edit_dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_student"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/pp_container_update"
+            android:layout_marginBottom="15dp">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/img_profile_update"
+                android:src="@drawable/blank_pfp"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                android:contentDescription="@string/photo_preview"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_img_update"
+                android:backgroundTint="@color/pink"
+                android:tint="@color/purple"
+                android:src="@drawable/icon_camera"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="@string/add_photo"
+                app:borderWidth="0dp"/>
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:id="@+id/et_nrp_update"
+            android:hint="@string/nrp"
+            android:background="@drawable/custom_edit_text"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:inputType="number"
+            android:importantForAutofill="no"/>
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:id="@+id/et_nama_update"
+            android:hint="@string/nama"
+            android:background="@drawable/custom_edit_text"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:inputType="text"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:id="@+id/et_nohp_update"
+            android:hint="@string/no_hp"
+            android:background="@drawable/custom_edit_text"
+            android:layout_marginBottom="25dp"
+            android:padding="10dp"
+            android:inputType="number"
+            android:importantForAutofill="no"/>
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_update"
+            android:background="@drawable/rounded_button_20"
+            android:backgroundTint="@color/purple"
+            android:text="@string/update"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_cancel_update"
+            android:background="@drawable/rounded_button20_outline_red"
+            android:text="@string/cancel"
+            android:textSize="18sp"
+            android:textColor="@color/red"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
