@@ -1,15 +1,17 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-android")
     id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "com.example.tugas4_crud_kt"
+    namespace = "com.example.tugas_456789_kt"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.tugas4_crud_kt"
+        applicationId = "com.example.tugas_456789_kt"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -50,6 +52,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -60,6 +66,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation("androidx.exifinterface:exifinterface:1.3.7")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -68,11 +75,37 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Bottom Nav
-    implementation ("androidx.compose.ui:ui:1.6.7")
-    implementation("androidx.compose.material:material:1.6.7")
+//    Room Dependencies
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
 
-    // Compose dependencies
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-    implementation ("androidx.navigation:navigation-compose:2.7.7")
+//    Dagger Hilt Dependency
+    val daggerHiltVersion = "2.48"
+    implementation("com.google.dagger:hilt-android:$daggerHiltVersion")
+    kapt("com.google.dagger:hilt-android-compiler:$daggerHiltVersion")
+    kapt("androidx.hilt:hilt-compiler:1.2.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
+//    Navigation Dependency
+    implementation ("androidx.compose.ui:ui:1.0.0")
+    implementation ("androidx.compose.material:material:1.0.0")
+    implementation ("androidx.navigation:navigation-compose:2.4.0-alpha01")
+
+//    Icons Extended Dependency
+    implementation ("androidx.compose.material:material-icons-extended:1.7.0-alpha08")
+
+//    Coil Dependency (Image Loader)
+    implementation("io.coil-kt:coil-compose:2.6.0")
+
+//    Retrofit Dependency (API Call)
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.3")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
+
+//    Accompanist Dependency (Permission Request)
+    implementation("com.google.accompanist:accompanist-permissions:0.24.9-beta")
 }

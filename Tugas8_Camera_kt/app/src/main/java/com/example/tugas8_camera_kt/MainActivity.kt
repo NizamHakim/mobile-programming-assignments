@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -50,10 +51,21 @@ class MainActivity : ComponentActivity() {
 fun MainApp(){
     val context = LocalContext.current
     val file = context.createImageFile()
-    val uri = FileProvider.getUriForFile(Objects.requireNonNull(context), context.packageName + ".provider", file)
+
+    val uri = FileProvider.getUriForFile(
+        Objects.requireNonNull(context),
+        context.packageName + ".provider", file
+    )
+
     var capturedImageUri by remember { mutableStateOf<Uri>(Uri.EMPTY) }
-    val cameraLauncher = rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()){ capturedImageUri = uri }
-    val permissionLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()){
+
+    val cameraLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.TakePicture()){ capturedImageUri = uri
+    }
+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ){
         if (it) {
             Toast.makeText(context, "Permission Granted", Toast.LENGTH_SHORT).show()
             cameraLauncher.launch(uri)
@@ -79,6 +91,7 @@ fun MainApp(){
                 val permissionCheckResult = ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA)
                 if (permissionCheckResult == PackageManager.PERMISSION_GRANTED) {
                     cameraLauncher.launch(uri)
+                    Log.d("TEMP_IMG", uri.toString())
                 } else {
                     permissionLauncher.launch(Manifest.permission.CAMERA)
                 }
